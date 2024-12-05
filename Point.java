@@ -42,11 +42,12 @@ public class Point {
             return 0.0;
         }
         //found out a simple
-        double radianArc = Math.atan2(y , x);
+        double radianArc = Math.atan2(y , x);//I dont know how arc tan 2 works but I think it has to do something with the quadrants and the origin. Helped using online tutorials
         double degree = Math.toDegrees(radianArc);
         if(degree < 0){
-            degree += 360;
+            degree += 360; 
         }
         return degree;
+        
     }
 }

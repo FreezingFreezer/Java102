@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Main{
+
+
     public static void main(String[]args){
         Point point = new Point(4,3);
         System.out.println("x: " + point.x + "y: " + point.y);
@@ -8,6 +12,10 @@ public class Main{
         Point a = new Point(3,4);
         Point b = new Point(2,7);
         Double abDistance = Point.distance(a, b);
+        Grid<Integer> grid2 = new Grid<>(3, 0);
+        grid2.set(0, 1, 5);
+        grid2.set(1, 2, 10);
+        //challenge 3
         System.out.println("x transl: (" + xTranslation.x + ", " + xTranslation.y + ")");
         System.out.println("y transl: (" + yTranslation.x + ", " + yTranslation.y + ")");
         System.out.println("xy transl: (" + xyTranslation.x + ", " + xyTranslation.y + ")");
@@ -26,6 +34,52 @@ public class Main{
         Point testangle = new Point(-2,-8);
         double tested = testangle.angle();
         System.out.println(tested);
-        // Left off at Polymorphism
+        //practice
+        ArrayList<String> arr = new ArrayList<>();  
+        arr.add("Hello");
+        arr.add("World");
+        System.out.println(arr);
+        arr.set(0, "Goodbye");
+        System.out.println(arr); 
+        ArrayList<Boolean> conditions = new ArrayList<>();
+        conditions.add(true);
+        conditions.add(arr.get(0) == "Hello");
+        conditions.add(conditions.get(0) || conditions.get(1));    
+        System.out.println(conditions); 
+        ArrayList<Integer> intArr = new ArrayList<>();
+        for (int i = 0; i < 50; i++) {
+	        intArr.add(0);
+        }
+        System.out.println(intArr.size());
+        System.out.println(intArr.get(32));
+        //grid
+        Grid<Integer> grid = new Grid<>(5, 0);
+        grid.set(2, 2, 4);
+        System.out.println(grid);
+        ArrayList<Integer> diagonal = grid2.diagonal();
+        System.out.println(diagonal); 
+        Grid<Integer> grida = new Grid<>(2, 0);
+        Grid<Integer> gridb = new Grid<>(5, 0);
+        Grid<Integer> gridc = new Grid<>(3, 0);
+    
+        System.out.println(Grid.maxSideLength());
+        
     }
+
+    public static void returnAll(LibraryItem[] items) {
+        for (LibraryItem item : items) {
+            item.returnItem();
+        }
+    }
+
+    public static ArrayList<LibraryItem> availableItems(LibraryItem[] items) {
+        ArrayList<LibraryItem> availableItems = new ArrayList<>();
+        for (LibraryItem item : items) {
+            if (item.available()) {
+                availableItems.add(item);
+            }
+        }
+        return availableItems;
+    }
+    
 }
