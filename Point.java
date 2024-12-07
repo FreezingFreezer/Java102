@@ -50,4 +50,9 @@ public class Point {
         return degree;
         
     }
+    public static void returnAll(LibraryItem[] items) {
+        for (LibraryItem item : items) {
+            item.returnItem();
+        }
+    }
 }
