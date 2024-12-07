@@ -45,7 +45,7 @@ public class Grid<T> {
 		}
 		return str;
 	}
-    public ArrayList<T> diagonal() {//This was confusing I asked ai for assistance
+    public ArrayList<T> diagonal() {//This was confusing 
         ArrayList<T> diagonal = new ArrayList<>(sideLength);
         for (int i = 0; i < sideLength; i++) {
             diagonal.add(grid.get(i).get(i));

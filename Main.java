@@ -12,9 +12,6 @@ public class Main{
         Point a = new Point(3,4);
         Point b = new Point(2,7);
         Double abDistance = Point.distance(a, b);
-        Grid<Integer> grid2 = new Grid<>(3, 0);
-        grid2.set(0, 1, 5);
-        grid2.set(1, 2, 10);
         //challenge 3
         System.out.println("x transl: (" + xTranslation.x + ", " + xTranslation.y + ")");
         System.out.println("y transl: (" + yTranslation.x + ", " + yTranslation.y + ")");
@@ -53,16 +50,6 @@ public class Main{
         System.out.println(intArr.size());
         System.out.println(intArr.get(32));
         //grid
-        Grid<Integer> grid = new Grid<>(5, 0);
-        grid.set(2, 2, 4);
-        System.out.println(grid);
-        ArrayList<Integer> diagonal = grid2.diagonal();
-        System.out.println(diagonal); 
-        Grid<Integer> grida = new Grid<>(2, 0);
-        Grid<Integer> gridb = new Grid<>(5, 0);
-        Grid<Integer> gridc = new Grid<>(3, 0);
-    
-        System.out.println(Grid.maxSideLength());
         
     }
 
